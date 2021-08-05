@@ -1,1 +1,23 @@
 sdfsdf
+
+
+public static String Pattern(long n)
+    {
+    	String result = toBinary(n);
+    	
+    	if(result.contains("10") || result.contains("01")) {
+        	return "YES";
+        }else {
+        	return "NO";
+        }
+       
+    }
+ 
+    private static String toBinary(long n) {
+		// TODO Auto-generated method stub
+    	 if (n == 0) {
+             return "";
+         }
+  
+         return toBinary(n / 2) + (n % 2);
+	}
